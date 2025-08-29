@@ -38,7 +38,7 @@ let searchQuery = "";
 // ========== DOM ==========
 const galleryEl   = document.getElementById("gallery");
 const favToggle   = document.getElementById("favToggle");
-const modeBtn     = document.getElementById("modeBtn"); // unchanged dark mode button
+const modeBtn     = document.getElementById("modeBtn"); // keep dark mode behavior
 const countBadge  = document.getElementById("countBadge");
 const navToggle   = document.getElementById("navToggle");
 const navMenu     = document.getElementById("navMenu");
@@ -251,16 +251,16 @@ galleryEl.addEventListener("click", (e) => {
   if (Number.isFinite(idx)) openLightbox(idx);
 });
 
-// Mobile nav toggle (hamburger)
+// Mobile nav toggle (hamburger) — menu opens from START
 navToggle.addEventListener("click", () => {
   const open = navMenu.classList.toggle("show");
   navToggle.setAttribute("aria-expanded", String(open));
 });
 
-// Search button toggles input visibility
+// Icon-only search button focuses the search input
 searchBtn.addEventListener("click", () => {
-  const showing = searchInput.classList.toggle("show");
-  if (showing) searchInput.focus();
+  searchInput.focus();
+  searchInput.select();
 });
 
 // Live search filtering
