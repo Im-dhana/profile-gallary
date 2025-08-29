@@ -14,6 +14,9 @@
         <span></span><span></span><span></span>
       </button>
       <h1 class="site-title">Profile Galary</h1>
+
+      <!-- Search bar beside the profile title -->
+      <input id="searchInput" class="search-input inline" type="search" placeholder="Search photos…" aria-label="Search photos" />
     </div>
 
     <nav class="site-nav">
@@ -24,11 +27,12 @@
     </nav>
 
     <div class="controls">
-      <button id="searchBtn" class="btn btn-search" title="Search">🔍 Search</button>
-      <input id="searchInput" class="search-input" type="search" placeholder="Search photos…" aria-label="Search photos" />
+      <!-- Icon-only search button -->
+      <button id="searchBtn" class="btn btn-search" aria-label="Search">🔍</button>
+
       <button id="modeBtn" class="btn" aria-pressed="false" title="Toggle dark/light">🌙 Dark mode</button>
 
-      <label class="toggle">
+      <label class="toggle" for="favToggle">
         <input id="favToggle" type="checkbox" />
         <span>Show favorites only</span>
       </label>
